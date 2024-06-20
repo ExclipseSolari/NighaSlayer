@@ -56,19 +56,40 @@ During my academic career, I developed strong relevant skills such as communicat
 I am a quick learner with a strong work ethic and a positive attitude. I am excited about the opportunity to contribute to a dynamic team and to gain valuable experience in your Company.
 
 Thank you for considering my application. I am enthusiastic about the possibility of starting my career with your company and contributing to your team's success.</p>
-          <p>Name: Alexander George M. Tamayo</p>
-          <p>Age: 23</p>
-          <p>Birthyear: January 9, 2001</p>
-          <p>Birthplace: Pangasinan</p>
-          <p>Status: Single</p>
-          <p>Citizenship: Filipino</p>
+          
+          <div class="additional-details" style="display: none;">
+            <h1>Name: Alexander George M. Tamayo</h1>
+            <p>Age: 23</p>
+            <p>Birthyear: January 9, 2001</p>
+            <p>Birthplace: Pangasinan</p>
+            <p>Status: Single</p>
+            <p>Citizenship: Filipino</p>
+          </div>
           <div class="button">
-            <button>Read More</button>
+            <button id="My Basic Information">Read More</button>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var additionalDetails = document.querySelector('.additional-details');
+      var readMoreBtn = document.getElementById('My Basic Information');
+      
+      function toggleAdditionalDetails() {
+        if (additionalDetails.style.display === 'none' || additionalDetails.style.display === '') {
+          additionalDetails.style.display = 'block';
+          readMoreBtn.textContent = 'Read Less';
+        } else {
+          additionalDetails.style.display = 'none';
+          readMoreBtn.textContent = 'My Basic Information';
+        }
+      }
+      additionalDetails.style.display = 'none';
+      readMoreBtn.addEventListener('click', toggleAdditionalDetails);
+    });
+  </script>
 
   <section class="skills" id="skills">
     <div class="content">
